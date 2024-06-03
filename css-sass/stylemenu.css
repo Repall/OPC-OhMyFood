@@ -60,6 +60,7 @@ header i {
   display: flex;
   flex-direction: row;
   overflow: hidden;
+  text-overflow: ellipsis;
   border-radius: 1em;
   box-shadow: 0px 4.011px 15.043px 0px rgba(0, 0, 0, 0.1);
 }
@@ -67,12 +68,18 @@ header i {
   display: flex;
   flex-direction: column;
   padding: 1em;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .menu .menu-list .menu-card .menu-text h3 {
+  overflow: hidden;
+  text-overflow: ellipsis;
   font-size: 18px;
 }
 .menu .menu-list .menu-card .menu-text p {
   font-size: 15px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .menu .menu-list .menu-card .menu-prix {
   padding: 1em;
