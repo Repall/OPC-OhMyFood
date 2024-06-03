@@ -6,6 +6,16 @@
     --icon-color: #7E7E7E;
 }
 
+$color-principal: #9356DC;
+$color-secondaire: #FF79DA; 
+$light-color-principal: lighten($color-principal, 5%);
+$light-color-secondaire: lighten($color-secondaire, 5%); 
+$melange1: linear-gradient(to top, $color-principal, $color-secondaire 80%);
+$melange2: linear-gradient(to top, $light-color-principal, $light-color-secondaire 80%);
+
+$bg-vert-clair-color: #99E2D0;
+$bg-vert-fonce-color: #008766;
+
 
 /*********** Header ***********/
 header i {
@@ -53,7 +63,9 @@ header i {
         }
 
         article {
-            width: 100%;
+            padding: 1em;
+            // margin: 1em;
+            // width: 100%;
             max-width: 634px;
             display: flex;
             flex-direction: column;
@@ -64,28 +76,70 @@ header i {
             background-color: white;
             display: flex;
             flex-direction: row;
-            justify-content: space-between;
-            padding: 1em;
+            // justify-content: space-between;
+            overflow: hidden;
+            
             border-radius: 1em;
             box-shadow: 0px 4.011px 15.043px 0px rgba(0, 0, 0, 0.10);
 
             .menu-text {
                 display: flex;
                 flex-direction: column;
+                padding: 1em;
+                // text-overflow: ellipsis;
 
                 h3 {
+                    // overflow: hidden;
+                    // text-overflow: ellipsis;
                     font-size: 18px;
                 }
+                
 
                 p {
                     font-size: 15px;
+                    // text-overflow: ellipsis;
                 }
             }
 
             .menu-prix {
+                padding: 1em;
+                margin-left: auto;
                 display: flex;
                 flex-direction: column;
                 justify-content: flex-end;
+            }
+
+            .menu-check {
+                // height: 100%;
+                margin-right: -65px;
+                width: 65px;
+                overflow: hidden;
+                // position: absolute;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                border-radius: 0 1em 1em 0;
+                background-color: $bg-vert-clair-color;
+                opacity: 0;
+                transition: 0.4s;
+                
+                svg {
+                    fill: white;
+                    color: $bg-vert-clair-color;
+                }
+
+                &::after {
+                    content: '';
+
+                }
+            }
+
+            &:hover,:focus {
+                .menu-check {
+                    margin-right: 0;
+                    opacity: 1;
+                }
             }
         }
     }
@@ -107,6 +161,10 @@ header i {
             .menu-titre {
                 justify-content: center;
                 gap: 2em;
+            }
+
+            article {
+                width: 100%;
             }
         }
     }

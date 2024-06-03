@@ -14,6 +14,12 @@
     --icon-color: #7E7E7E;
 }
 
+$color-principal: #9356DC;
+$color-secondaire: #FF79DA; 
+$light-color-principal: lighten($color-principal, 5%);
+$light-color-secondaire: lighten($color-secondaire, 5%); 
+$melange1: linear-gradient(to top, $color-principal, $color-secondaire 80%);
+$melange2: linear-gradient(to top, $light-color-principal, $light-color-secondaire 80%);
 
 $bg-vert-clair-color: #99E2D0;
 $bg-vert-fonce-color: #008766;
@@ -34,6 +40,38 @@ a {
     /* font-style: normal; */
 }
 
+.lucide {           //COEUR
+    cursor: pointer;
+    // transition: 1s;
+
+    &:hover {
+        color: $color-principal;
+        fill: $color-principal;
+    }
+
+    &:focus {
+        color: $color-principal;
+        fill: $color-principal;
+    }
+}
+
+.btn {
+    width: 218px;
+    height: 50px;
+    border: none;
+    border-radius: 25px;
+    // background-color: $color-principal;
+    background: $melange1;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+    color: white;
+    cursor: pointer;
+    transition: 1s ease-in-out;
+    // transition: transform 0.4s;
+    &:hover {
+        // background-color: $color-secondaire;
+        background: $melange2;
+    }
+}
 
 /*********** Header ***********/
 header {
@@ -74,20 +112,8 @@ header {
     }
 }
 
-.btn {
-    width: 218px;
-    height: 50px;
-    border: none;
-    border-radius: 25px;
-    background: linear-gradient(to top, var(--bg-v-color), var(--bg-r-color));
-    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
-    color: white;
-    cursor: pointer;
-    transition: transform 400ms;
-    &:hover {
-        background: linear-gradient(to bottom , var(--bg-v-color), var(--bg-r-color));
-    }
-}
+
+
 
 
 /*********** Fonctionnement ***********/
@@ -202,16 +228,7 @@ header {
                 }
 
                 .card-favori {
-                    padding-right: 1em;
-
-                    svg {
-                        // color: #9356DC;
-                        // background-color: #9356DC;
-                        &:hover {
-                            color: var(--bg-v-color);
-                            // color: linear-gradient(to bottom, var(--bg-v-color), var(--bg-r-color));
-                        }
-                    }
+                    padding-right: 1em;  
                 }
             }
 
