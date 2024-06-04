@@ -26,9 +26,7 @@ $bg-vert-fonce-color: #008766;
 
 body {
     max-width: 1920px;
-    min-width: 320px;
-    // background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
-    
+    min-width: 320px;    
 }
 
 a {
@@ -42,38 +40,60 @@ a {
     /* font-style: normal; */
 }
 
-.lucide {           //COEUR
-    cursor: pointer;
-    fill: white;
-    // transition: 1s;
 
-    &:active {
-        color: $color-principal;
-        fill: $color-principal;
-        
-    }
-
-    // &:focus {
-    //     color: $color-principal;
-    //     fill: $color-principal;
-    // }
+//*********** COEUR ***********//
+.hidden-checkbox {
+    display: none;
 }
 
+.lucide {
+    fill: transparent;
+    cursor: pointer;
+    
+}
+
+.hidden-checkbox:checked + label .lucide {
+    fill: url(#gradient);
+    color: transparent;
+}
+.hidden-checkbox:hover + label .lucide {
+    fill: url(#gradient);
+    color: transparent;
+}
+
+#stop1 {
+    stop-color: #9356dc;
+    stop-opacity: 1;
+}
+
+#stop2 {
+    stop-color: #ff79da;
+    stop-opacity: 1;
+}
+
+
+//*********** BOUTON ***********//
 .btn {
     width: 218px;
     height: 50px;
     border: none;
     border-radius: 25px;
-    // background-color: $color-principal;
     background: $melange1;
     box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
     color: white;
     cursor: pointer;
+    font-weight: bold;
     
     &:hover {
         transition: 0.5s ease-in-out;
         opacity: 0.8;
         
+    }
+
+    a {
+        &:active {
+            transition: 1s;
+        }
     }
 }
 
@@ -209,7 +229,6 @@ header {
             display: flex;
             flex-direction: row;
             background-color: var(--bg-g-color);
-            /*justify-content: center; */
             align-items: center;
             border-radius: 20px;
             gap: 1em;
@@ -274,7 +293,7 @@ header {
                     padding-left: 1em ;
                 }
 
-                .card-favori {
+                svg {
                     padding-right: 1em;  
                 }
             }
@@ -292,7 +311,7 @@ header {
                 background-color: $bg-vert-clair-color;
                 color: $bg-vert-fonce-color;
                 font-size: 14px;
-                font-weight: 500px;
+                font-weight: 500;
                 border-radius: 3px;
             }
         }

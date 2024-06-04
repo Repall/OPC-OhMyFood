@@ -24,7 +24,6 @@
             <p>Chargement...</p>
         </div>
 
-
         <!-- HEADER -->
         <header>
             <h1 class="police-resto-title">ohmyfood</h1>
@@ -43,7 +42,7 @@
                 </div>
                 <div>
                     <button class="btn">
-                        <a href="#restaurant"><h4>Explorer nos restaurants</h4></a>
+                        <a href="#restaurant">Explorer nos restaurants</a>
                     </button>
                 </div>
             </section>
@@ -78,12 +77,10 @@
 
             <!-- RESTAURANTS -->
             <section class="restaurants" id="restaurant">
-                <div class="restaurants-title">
-                    <h2>Restaurants</h2>
-                </div>
+                <h2 class="restaurants-title">Restaurants</h2>
                 <div class="restaurants-card">
                     <a href="./menu/la-palette-du-gout.html">
-                    <!-- <a href="#"> -->
+                        <!-- <a href="#"> -->
                         <article class="card">
                             <p class="nouveau">Nouveau</p>
                             <img src="/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="palette du goût" />
@@ -92,7 +89,8 @@
                                     <h3>La palette du goût</h3>
                                     <p>Ménilmontant</p>
                                 </div>
-                                <div class="card-favori">
+                                <input type="checkbox" id="svgCheckbox1" class="hidden-checkbox" />
+                                <label for="svgCheckbox1">
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
                                         width="24"
@@ -108,8 +106,14 @@
                                         <path
                                             d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"
                                         />
+                                        <defs>
+                                            <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                                <stop offset="0%" id="stop1" />
+                                                <stop offset="100%" id="stop2" />
+                                            </linearGradient>
+                                        </defs>
                                     </svg>
-                                </div>
+                                </label>
                             </div>
                         </article>
                     </a>
@@ -122,7 +126,8 @@
                                     <h3>La note enchantée</h3>
                                     <p>Charonne</p>
                                 </div>
-                                <div class="card-favori">
+                                <input type="checkbox" id="svgCheckbox2" class="hidden-checkbox" />
+                                <label for="svgCheckbox2">
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
                                         width="24"
@@ -138,8 +143,14 @@
                                         <path
                                             d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"
                                         />
+                                        <defs>
+                                            <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                                <stop offset="0%" id="stop1" />
+                                                <stop offset="100%" id="stop2" />
+                                            </linearGradient>
+                                        </defs>
                                     </svg>
-                                </div>
+                                </label>
                             </div>
                         </article>
                     </a>
@@ -151,7 +162,8 @@
                                     <h3>À la française</h3>
                                     <p>Cité Rouge</p>
                                 </div>
-                                <div class="card-favori">
+                                <input type="checkbox" id="svgCheckbox3" class="hidden-checkbox" />
+                                <label for="svgCheckbox3">
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
                                         width="24"
@@ -167,8 +179,14 @@
                                         <path
                                             d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"
                                         />
+                                        <defs>
+                                            <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                                <stop offset="0%" id="stop1" />
+                                                <stop offset="100%" id="stop2" />
+                                            </linearGradient>
+                                        </defs>
                                     </svg>
-                                </div>
+                                </label>
                             </div>
                         </article>
                     </a>
@@ -180,7 +198,8 @@
                                     <h3>Le délice des sens</h3>
                                     <p>Folie-Méricourt</p>
                                 </div>
-                                <div class="card-favori">
+                                <input type="checkbox" id="svgCheckbox4" class="hidden-checkbox" />
+                                <label for="svgCheckbox4">
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
                                         width="24"
@@ -196,8 +215,14 @@
                                         <path
                                             d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"
                                         />
+                                        <defs>
+                                            <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                                <stop offset="0%" id="stop1" />
+                                                <stop offset="100%" id="stop2" />
+                                            </linearGradient>
+                                        </defs>
                                     </svg>
-                                </div>
+                                </label>
                             </div>
                         </article>
                     </a>

@@ -29,13 +29,33 @@ a {
   /* font-style: normal; */
 }
 
-.lucide {
-  cursor: pointer;
-  fill: white;
+.hidden-checkbox {
+  display: none;
 }
-.lucide:active {
-  color: #9356DC;
-  fill: #9356DC;
+
+.lucide {
+  fill: transparent;
+  cursor: pointer;
+}
+
+.hidden-checkbox:checked + label .lucide {
+  fill: url(#gradient);
+  color: transparent;
+}
+
+.hidden-checkbox:hover + label .lucide {
+  fill: url(#gradient);
+  color: transparent;
+}
+
+#stop1 {
+  stop-color: #9356dc;
+  stop-opacity: 1;
+}
+
+#stop2 {
+  stop-color: #ff79da;
+  stop-opacity: 1;
 }
 
 .btn {
@@ -47,10 +67,14 @@ a {
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
   color: white;
   cursor: pointer;
+  font-weight: bold;
 }
 .btn:hover {
   transition: 0.5s ease-in-out;
   opacity: 0.8;
+}
+.btn a:active {
+  transition: 1s;
 }
 
 /*********** Loader ***********/
@@ -162,7 +186,6 @@ header {
   display: flex;
   flex-direction: row;
   background-color: var(--bg-g-color);
-  /*justify-content: center; */
   align-items: center;
   border-radius: 20px;
   gap: 1em;
@@ -222,7 +245,7 @@ header {
   gap: 4px;
   padding-left: 1em;
 }
-.restaurants .restaurants-card .card .card-content .card-favori {
+.restaurants .restaurants-card .card .card-content svg {
   padding-right: 1em;
 }
 .restaurants .restaurants-card .card .nouveau {
@@ -238,7 +261,7 @@ header {
   background-color: #99E2D0;
   color: #008766;
   font-size: 14px;
-  font-weight: 500px;
+  font-weight: 500;
   border-radius: 3px;
 }
 

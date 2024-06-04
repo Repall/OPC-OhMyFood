@@ -115,13 +115,13 @@ header i {
   border-radius: 0 1em 1em 0;
   background-color: #99E2D0;
   opacity: 0;
+  transition: 0.4s;
 }
 .menu .menu-list article .menu-card .menu-check svg {
   fill: white;
   color: #99E2D0;
 }
 .menu .menu-list article .menu-card:hover .menu-check, .menu .menu-list article .menu-card :focus .menu-check {
-  transition: 0.4s;
   margin-right: 0;
   opacity: 1;
 }
@@ -134,7 +134,7 @@ header i {
   .menu .menu-list article {
     width: 100%;
   }
-  .menu .menu-list .menu-card {
+  .menu .menu-list article .menu-card {
     max-width: none;
   }
 }

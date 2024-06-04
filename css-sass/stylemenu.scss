@@ -138,22 +138,16 @@ header i {
                     border-radius: 0 1em 1em 0;
                     background-color: $bg-vert-clair-color;
                     opacity: 0;
-                    
+                    transition: 0.4s;
                     
                     svg {
                         fill: white;
                         color: $bg-vert-clair-color;
                     }
-    
-                    // &::after {
-                    //     content: '';
-    
-                    // }
                 }
     
                 &:hover,:focus {
                     .menu-check {
-                        transition: 0.4s;
                         margin-right: 0;
                         opacity: 1;
                     }
@@ -180,11 +174,13 @@ header i {
 
             article {
                 width: 100%;
+
+                .menu-card {
+                    max-width:none
+                }
             }
 
-            .menu-card {
-                max-width:none
-            }
+            
         }
     }
 }
