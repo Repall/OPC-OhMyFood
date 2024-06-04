@@ -31,12 +31,9 @@ a {
 
 .lucide {
   cursor: pointer;
+  fill: white;
 }
-.lucide:hover {
-  color: #9356DC;
-  fill: #9356DC;
-}
-.lucide:focus {
+.lucide:active {
   color: #9356DC;
   fill: #9356DC;
 }
@@ -50,10 +47,10 @@ a {
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
   color: white;
   cursor: pointer;
-  transition: 1s ease-in-out;
 }
 .btn:hover {
-  background: linear-gradient(to top, #a16be0, #ff93e1 80%);
+  transition: 0.5s ease-in-out;
+  opacity: 0.8;
 }
 
 /*********** Loader ***********/
@@ -68,7 +65,7 @@ a {
   align-items: center;
   background-color: black;
   pointer-events: none;
-  animation: visibility 0.5s ease forwards;
+  animation: visibility 1s ease forwards;
 }
 .loader p {
   font-size: 30px;

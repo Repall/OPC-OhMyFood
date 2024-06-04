@@ -67,77 +67,96 @@ header i {
             display: flex;
             flex-direction: column;
             gap: 12px;
-        }
 
-        .menu-card {
-            background-color: white;
-            display: flex;
-            flex-direction: row;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            border-radius: 1em;
-            box-shadow: 0px 4.011px 15.043px 0px rgba(0, 0, 0, 0.10);
-
-            .menu-text {
-                display: flex;
-                flex-direction: column;
-                padding: 1em;
-                // white-space: nowrap;
-                overflow: hidden;
-                text-overflow: ellipsis;
-
-                h3 {
-                    overflow: hidden;
-                    text-overflow: ellipsis;
-                    font-size: 18px;
+            h2 {
+                position: relative;
+                font-weight: 300;
+                font-size: 16px;
+                text-transform: uppercase;
+                &::before{
+                    content: '';
+                    position: absolute;
+                    bottom: -6px;
+                    width: 43px;
+                    height: 4px;
+                    background-color: $bg-vert-clair-color;
+                    }
                 }
-                
-
-                p {
-                    font-size: 15px;
-                    overflow: hidden;
-                    text-overflow: ellipsis;
-                }
-            }
-
-            .menu-prix {
-                padding: 1em;
-                margin-left: auto;
-                display: flex;
-                flex-direction: column;
-                justify-content: flex-end;
-            }
-
-            .menu-check {
-                // height: 100%;
-                margin-right: -65px;
-                width: 65px;
-                overflow: hidden;
-                // position: absolute;
+            
+            
+            .menu-card {
+                max-width: 355px;
+                background-color: white;
                 display: flex;
                 flex-direction: row;
-                justify-content: center;
-                align-items: center;
-                border-radius: 0 1em 1em 0;
-                background-color: $bg-vert-clair-color;
-                opacity: 0;
-                transition: 0.4s;
-                
-                svg {
-                    fill: white;
-                    color: $bg-vert-clair-color;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                border-radius: 1em;
+                box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.10);
+                cursor: pointer;
+    
+                .menu-text {
+                    display: flex;
+                    flex-direction: column;
+                    padding: 1em;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+    
+                    h3 {
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        font-size: 18px;
+                    }
+                    
+    
+                    p {
+                        font-size: 15px;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
                 }
-
-                &::after {
-                    content: '';
-
+    
+                .menu-prix {
+                    padding: 1em;
+                    margin-left: auto;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-end;
                 }
-            }
-
-            &:hover,:focus {
+    
                 .menu-check {
-                    margin-right: 0;
-                    opacity: 1;
+                    // height: 100%;
+                    margin-right: -65px;
+                    width: 65px;
+                    // overflow: hidden;
+                    // position: absolute;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 0 1em 1em 0;
+                    background-color: $bg-vert-clair-color;
+                    opacity: 0;
+                    
+                    
+                    svg {
+                        fill: white;
+                        color: $bg-vert-clair-color;
+                    }
+    
+                    // &::after {
+                    //     content: '';
+    
+                    // }
+                }
+    
+                &:hover,:focus {
+                    .menu-check {
+                        transition: 0.4s;
+                        margin-right: 0;
+                        opacity: 1;
+                    }
                 }
             }
         }
@@ -148,11 +167,8 @@ header i {
 
 
 
-@media screen and (min-width: 834px) and (max-width: 1024px) {
-    
-}
 
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 834px) and (max-width: 1024px) {
     .menu {
 
         .menu-list {
@@ -165,6 +181,35 @@ header i {
             article {
                 width: 100%;
             }
+
+            .menu-card {
+                max-width:none
+            }
+        }
+    }
+}
+
+
+@media screen and (min-width: 1025px) {
+    
+    .menu {
+
+        .menu-list {
+        
+            .menu-titre {
+                justify-content: center;
+                gap: 2em;
+            }
+
+            article {
+                width: 100%;
+
+                .menu-card {
+                    max-width:none
+                }
+            }
+
+            
         }
     }
 }
