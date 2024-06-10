@@ -126,11 +126,8 @@ header i {
                 }
     
                 .menu-check {
-                    // height: 100%;
                     margin-right: -65px;
                     width: 65px;
-                    // overflow: hidden;
-                    // position: absolute;
                     display: flex;
                     flex-direction: row;
                     justify-content: center;
@@ -146,7 +143,7 @@ header i {
                     }
                 }
     
-                &:hover,:focus {
+                &:hover {
                     .menu-check {
                         margin-right: 0;
                         opacity: 1;

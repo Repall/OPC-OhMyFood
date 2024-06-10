@@ -121,7 +121,7 @@ header i {
   fill: white;
   color: #99E2D0;
 }
-.menu .menu-list article .menu-card:hover .menu-check, .menu .menu-list article .menu-card :focus .menu-check {
+.menu .menu-list article .menu-card:hover .menu-check {
   margin-right: 0;
   opacity: 1;
 }
