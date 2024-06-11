@@ -62,6 +62,7 @@ header i {
         }
 
         article {
+            width: 85%;
             padding: 1em;
             max-width: 634px;
             display: flex;
@@ -85,7 +86,7 @@ header i {
             
             
             .menu-card {
-                max-width: 355px;
+                // max-width: 355px;
                 background-color: white;
                 display: flex;
                 flex-direction: row;

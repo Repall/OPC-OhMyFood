@@ -49,6 +49,7 @@ header i {
   font-size: 20px;
 }
 .menu .menu-list article {
+  width: 85%;
   padding: 1em;
   max-width: 634px;
   display: flex;
@@ -70,7 +71,6 @@ header i {
   background-color: #99E2D0;
 }
 .menu .menu-list article .menu-card {
-  max-width: 355px;
   background-color: white;
   display: flex;
   flex-direction: row;
