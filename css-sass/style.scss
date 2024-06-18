@@ -46,27 +46,80 @@ a {
     display: none;
 }
 
-.lucide {
-    fill: transparent;
+.coeur0 {
+    z-index: 20;
+    fill: url(#gradient);
+    color: transparent;
     cursor: pointer;
-    
+    position: absolute;
+    opacity: 0;
+    transition: 0.7s ease-in-out;
+    right: 12px;
+    bottom: 25px;
 }
 
-.hidden-checkbox:checked + label .lucide {
-    fill: url(#gradient);
-    color: transparent;
-}
-.hidden-checkbox:hover + label .lucide {
-    fill: url(#gradient);
-    color: transparent;
+.coeur1 {
+    z-index: 20;
+    position: absolute; 
+    transition: 0.7s ease-in-out;
+    right: 12px;
+    bottom: 25px;
 }
 
-#stop1 {
+.hidden-checkbox:checked + label .coeur0 {
+    opacity: 1;
+}
+.hidden-checkbox:hover + label .coeur0 {
+    opacity: 1;
+    transition: 0.7s ease-in-out;
+}
+
+.hidden-checkbox:checked + label .coeur1 {
+    opacity: 0;
+}
+.hidden-checkbox:hover + label .coeur1 {
+    opacity: 0;
+    transition: 0.7s ease-in-out;
+}
+
+.lucide0 {
+    fill: url(#gradient);
+    color: transparent;
+    cursor: pointer;
+    position: absolute;
+    opacity: 0;
+    transition: 0.7s ease-in-out;
+    top: 50px;
+}
+
+.lucide1 {
+    position: absolute; 
+    transition: 0.7s ease-in-out;
+    top: 50px;
+}
+
+.hidden-checkbox:checked + label .lucide0 {
+    opacity: 1;
+}
+.hidden-checkbox:hover + label .lucide0 {
+    opacity: 1;
+    transition: 0.7s ease-in-out;
+}
+
+.hidden-checkbox:checked + label .lucide1 {
+    opacity: 0;
+}
+.hidden-checkbox:hover + label .lucide1 {
+    opacity: 0;
+    transition: 0.7s ease-in-out;
+}
+
+.stop1 {
     stop-color: #9356dc;
     stop-opacity: 1;
 }
 
-#stop2 {
+.stop2 {
     stop-color: #ff79da;
     stop-opacity: 1;
 }
@@ -74,6 +127,7 @@ a {
 
 //*********** BOUTON ***********//
 .btn {
+    display: flex;
     width: 218px;
     height: 50px;
     border: none;
@@ -82,10 +136,13 @@ a {
     box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
     color: white;
     cursor: pointer;
+    font-size: 14px;
     font-weight: bold;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s ease-in-out;
     
     &:hover {
-        transition: 0.5s ease-in-out;
         opacity: 0.8;
         box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 1);
     }
@@ -132,7 +189,7 @@ a {
 
 @keyframes text {
     to{
-        color: $color-secondaire
+        color: $color-secondaire;
     }
 }
 
@@ -205,7 +262,7 @@ header {
             flex-direction: row;
             justify-content: center;
             align-items: center;
-            width: 25px;
+            width: 29px;
             height: 25px;
             border-radius: 50%;
             border: 1px solid var(--bg-v-color);
@@ -255,7 +312,7 @@ header {
         display: flex;
         flex-direction: column;
         gap: 18px;
-        
+
         .card {
             display: flex;
             flex-direction: column;
@@ -264,6 +321,13 @@ header {
             border-radius: 20px;
             position: relative;
             
+            .lien {
+                z-index: 5;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+            }
+
             img {
                 width: 100%;
                 height: 231px;
@@ -383,10 +447,6 @@ footer {
             .block {
                 width: 100%;
                 padding-left: 0;
-
-                p {
-                    width: 30px;
-                }
             }
         }
     }

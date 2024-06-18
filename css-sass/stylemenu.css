@@ -6,6 +6,18 @@
   --icon-color: #7E7E7E;
 }
 
+body {
+  animation: visibilityM 2s ease;
+}
+
+@keyframes visibilityM {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 /*********** Header ***********/
 header i {
   position: absolute;
@@ -48,7 +60,20 @@ header i {
   justify-content: space-between;
   font-size: 20px;
 }
+.menu .menu-list .menu-entree {
+  animation: menu 3s ease forwards;
+}
+.menu .menu-list .menu-plats {
+  animation: menu 3s ease forwards;
+  animation-delay: 2s;
+}
+.menu .menu-list .menu-desserts {
+  animation: menu 3s ease forwards;
+  animation-delay: 4s;
+}
 .menu .menu-list article {
+  opacity: 0;
+  margin-top: 200px;
   width: 85%;
   padding: 1em;
   max-width: 634px;
@@ -126,6 +151,12 @@ header i {
   opacity: 1;
 }
 
+@keyframes menu {
+  to {
+    opacity: 1;
+    margin-top: 0;
+  }
+}
 @media screen and (min-width: 834px) and (max-width: 1024px) {
   .menu .menu-list .menu-titre {
     justify-content: center;

@@ -32,32 +32,90 @@ a {
   display: none;
 }
 
-.lucide {
-  fill: transparent;
+.coeur0 {
+  z-index: 20;
+  fill: url(#gradient);
+  color: transparent;
   cursor: pointer;
+  position: absolute;
+  opacity: 0;
+  transition: 0.7s ease-in-out;
+  right: 12px;
+  bottom: 25px;
 }
 
-.hidden-checkbox:checked + label .lucide {
+.coeur1 {
+  z-index: 20;
+  position: absolute;
+  transition: 0.7s ease-in-out;
+  right: 12px;
+  bottom: 25px;
+}
+
+.hidden-checkbox:checked + label .coeur0 {
+  opacity: 1;
+}
+
+.hidden-checkbox:hover + label .coeur0 {
+  opacity: 1;
+  transition: 0.7s ease-in-out;
+}
+
+.hidden-checkbox:checked + label .coeur1 {
+  opacity: 0;
+}
+
+.hidden-checkbox:hover + label .coeur1 {
+  opacity: 0;
+  transition: 0.7s ease-in-out;
+}
+
+.lucide0 {
   fill: url(#gradient);
   color: transparent;
+  cursor: pointer;
+  position: absolute;
+  opacity: 0;
+  transition: 0.7s ease-in-out;
+  top: 50px;
 }
 
-.hidden-checkbox:hover + label .lucide {
-  fill: url(#gradient);
-  color: transparent;
+.lucide1 {
+  position: absolute;
+  transition: 0.7s ease-in-out;
+  top: 50px;
 }
 
-#stop1 {
+.hidden-checkbox:checked + label .lucide0 {
+  opacity: 1;
+}
+
+.hidden-checkbox:hover + label .lucide0 {
+  opacity: 1;
+  transition: 0.7s ease-in-out;
+}
+
+.hidden-checkbox:checked + label .lucide1 {
+  opacity: 0;
+}
+
+.hidden-checkbox:hover + label .lucide1 {
+  opacity: 0;
+  transition: 0.7s ease-in-out;
+}
+
+.stop1 {
   stop-color: #9356dc;
   stop-opacity: 1;
 }
 
-#stop2 {
+.stop2 {
   stop-color: #ff79da;
   stop-opacity: 1;
 }
 
 .btn {
+  display: flex;
   width: 218px;
   height: 50px;
   border: none;
@@ -66,10 +124,13 @@ a {
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
   color: white;
   cursor: pointer;
+  font-size: 14px;
   font-weight: bold;
+  align-items: center;
+  justify-content: center;
+  transition: 0.5s ease-in-out;
 }
 .btn:hover {
-  transition: 0.5s ease-in-out;
   opacity: 0.8;
   box-shadow: 0px 4px 10px 0px rgb(0, 0, 0);
 }
@@ -170,7 +231,7 @@ header {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  width: 25px;
+  width: 29px;
   height: 25px;
   border-radius: 50%;
   border: 1px solid var(--bg-v-color);
@@ -223,6 +284,12 @@ header {
   background-color: white;
   border-radius: 20px;
   position: relative;
+}
+.restaurants .restaurants-card .card .lien {
+  z-index: 5;
+  position: absolute;
+  width: 100%;
+  height: 100%;
 }
 .restaurants .restaurants-card .card img {
   width: 100%;
@@ -323,9 +390,6 @@ footer .footer-link a:hover {
   .fonctionnement .fonctionnement-block .block {
     width: 100%;
     padding-left: 0;
-  }
-  .fonctionnement .fonctionnement-block .block p {
-    width: 30px;
   }
   /*********** Restaurants ***********/
   .restaurants {
