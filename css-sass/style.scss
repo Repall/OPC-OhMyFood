@@ -54,7 +54,7 @@ a {
     position: absolute;
     opacity: 0;
     transition: 0.7s ease-in-out;
-    right: 12px;
+    right: 15px;
     bottom: 25px;
 }
 
@@ -62,7 +62,7 @@ a {
     z-index: 20;
     position: absolute; 
     transition: 0.7s ease-in-out;
-    right: 12px;
+    right: 15px;
     bottom: 25px;
 }
 
@@ -89,12 +89,14 @@ a {
     position: absolute;
     opacity: 0;
     transition: 0.7s ease-in-out;
+    right: 20px;
     top: 50px;
 }
 
 .lucide1 {
     position: absolute; 
     transition: 0.7s ease-in-out;
+    right: 20px;
     top: 50px;
 }
 
@@ -425,6 +427,15 @@ footer {
 }
 
 @media screen and (min-width: 1024px) {
+
+
+    .lucide0 {
+        right: 350px;
+    }
+    
+    .lucide1 {
+        right: 350px;
+    }
     
     /*********** Localisation ***********/
     .localisation {
