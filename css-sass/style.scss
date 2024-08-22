@@ -271,6 +271,7 @@ header {
             background-color: var(--bg-v-color);
             color: white;
             font-size: 14px;
+            flex-shrink: 0;
         }
 
         .block-content {
